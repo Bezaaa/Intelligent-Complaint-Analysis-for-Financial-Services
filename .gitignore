@@ -1,0 +1,10 @@
+__pycache__/
+.ipynb_checkpoints/
+.env
+vector_store/
+*.pyc
+*.pkl
+*.DS_Store
+# Ignore raw and intermediate data
+data/
+

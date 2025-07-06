@@ -1,0 +1,36 @@
+# Core dependencies
+pandas
+numpy
+scikit-learn
+
+# Visualization (for EDA)
+matplotlib
+seaborn
+missingno
+
+# Text preprocessing
+nltk
+regex
+
+# Embeddings and LLM
+sentence-transformers
+transformers
+torch
+langchain
+openai  # if using OpenAI LLMs (optional)
+
+# Vector store
+faiss-cpu  # Or faiss-gpu if you're using GPU
+chromadb  # Alternative to FAISxyyS (you can use one or both)
+
+# Web app interface
+streamlit
+# OR use gradio instead:
+# gradio
+
+# Utils
+tqdm
+python-dotenv
+
+# Jupyter notebook
+jupyterlab
