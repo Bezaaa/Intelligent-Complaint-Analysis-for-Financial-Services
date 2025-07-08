@@ -5,7 +5,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.docstore.document import Document
 
-# === 1. Load preprocessed data ===
+
 data_path = Path("data/filtered_complaints.csv")
 df = pd.read_csv(data_path)
 
@@ -32,13 +32,13 @@ for idx, row in df.iterrows():
 
 print(f"Total chunks created: {len(docs)}")
 
-# === 3. Embedding Model ===
+
 embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
-# === 4. Create FAISS vector store ===
+
 vector_store = FAISS.from_documents(docs, embedding_model)
 
-# === 5. Save the index ===
+
 output_dir = Path("../vector_store")
 output_dir.mkdir(exist_ok=True)
 vector_store.save_local(str(output_dir))
